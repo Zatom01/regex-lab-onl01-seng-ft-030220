@@ -21,7 +21,7 @@ end
 def first_word_capitalized_and_ends_with_punctuation?(text)
   if text.scan(/\b[A-Z]\w+[:punct:]/)
     true
-  elsif text.scan(/\b[^A-Z]\w+[.!?\\-]/) || text.scan(/\b[A-Z]\w+[^.!?\\-]/) || text.scan(/\b[^A-Z]\w+[^.!?\\-]/)
+  elsif text.scan(/\b[^A-Z]\w+[^:punct:/) || text.scan(/\b[A-Z]\w+[^:punct:]/) || text.scan(/\b[^A-Z]\w+[^:punct:]/)
     false 
     
   end 
